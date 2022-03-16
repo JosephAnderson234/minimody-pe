@@ -1,5 +1,209 @@
-@import url(./baseColors.css);
+@import url('./baseColors.css');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .home{
-    background: rgb(204,117,213);
-    background: linear-gradient(126deg, rgba(204,117,213,1) 0%, rgba(233,191,224,1) 15%, rgba(255,255,255,1) 51%, rgba(233,191,224,1) 90%, rgba(204,117,213,1) 100%);
+    z-index: 0;
+}
+
+.home h1{
+    font-weight: bold;
+    text-align: center;
+    padding: 20px 0;
+    font-family: 'Raleway', sans-serif;
+    width: 100%;
+    animation: introTitle 1.2s;
+}
+
+@keyframes introTitle {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+
+.home .linea{
+    background: var(--color);
+    height: 5px;
+    width: 100%;
+    display: block;
+}
+
+/*Here aplictaed the style for the mural's image*/
+
+.home .galery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    width: 95%;
+    margin: auto;
+    grid-gap: 50px;
+    padding: 40px 0;
+    overflow: hidden;
+}
+
+.home .galery a img{
+    width: 100%;
+    vertical-align: top;
+    height: 300px;
+    object-fit: cover;
+    transition: all 0.5s;
+}
+
+.home .galery > a{
+    display: block;
+    position: relative;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+    overflow: hidden;
+}
+
+/*Here aplictaed the style for the mural's image*/
+
+.home .galery a:hover img{
+    filter: blur(2px);
+    transform: rotate(10deg) scale(1.3);
+}
+
+.home .light-box{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(0,0,0,0.5);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    height: 100vh;
+    z-index: 11;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(0);
+}
+.home .light-box img{
+    width: 50vw;
+    max-height: 90vh;
+}
+
+.home .light-box:target{
+    transform: scale(1);
+}
+.cancel{
+    display: block;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    background: black;
+    color: var(--bgnav);
+    text-decoration: none;
+    font-size: 1em;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    padding: 0.2em;
+}
+
+.cancel ion-icon{
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.next{
+    display: block;
+    background: var(--bgnav);
+    color: black;
+    height: 40px;
+    width: 40px;
+    line-height: 30px;
+    text-decoration: none;
+    text-align: center;
+    padding: 0.19em;
+}
+
+.next ion-icon{
+    font-size: 2em;
+}
+
+/*rseponsive desing*/
+
+@media (max-width: 1015px){
+    .home .light-box img{
+        width: 60vw;
+    }
+}
+
+@media (max-width: 806px){
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media (max-width: 750px){
+    .home h1{
+        font-size: 1.6em;
+    }
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+@media (max-width: 700px){
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 630px){
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+}
+
+@media (max-width: 540px){
+    .home .light-box img{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 436px){
+    .home h1{
+        font-size: 1.4em;
+    }
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 366px){
+    .home h1{
+        font-size: 1.1em;
+    }
+    .home .galery{
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .next{
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+    .next ion-icon{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 330px){
+    .next{
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+    }
+    .next ion-icon{
+        font-size: 1.3em;
+    }
 }

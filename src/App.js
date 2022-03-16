@@ -12,6 +12,14 @@ import Foter from './components/foter';
 import Home from './pages/home';
 import Contacto from './pages/contacto';
 
+const url = "http://192.168.254.110:2000/post";
+fetch(url)
+    .then(response => response.json())
+    .then(data => console.log(data))
+    .catch(error => console.log('Authorization failed : ' + error.message));
+
+
+
 function Nav() {
   const [isCircle, setIsCircle] = useState(true);
 

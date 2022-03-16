@@ -1,4 +1,4 @@
-@import url(./baseColors.css);
+@import url('./baseColors.css');
 
 /* general nav */
 .navegation{
@@ -7,6 +7,7 @@
     font-size: 16px;
     margin: 0;
     background: var(--bgnav);
+    z-index: 10;
 }
 /* container of the image icon and the buttom of responsive desing
 the estucture of the container is the same of the navbar of bootstrap
@@ -38,6 +39,7 @@ and the ul have a div, and this have a the button responsive.
     cursor: pointer;
     border-radius: 50%;
     transition: all 1s ease;
+    margin-left: 0.5em;
 }
 .navegation .container div #main-show:hover{
     background: #fff;
