@@ -1,0 +1,177 @@
+@import url(./baseColors.css);
+
+/* general nav */
+.navegation{
+    position: sticky;
+    top: 0;
+    font-size: 16px;
+    margin: 0;
+    background: var(--bgnav);
+}
+/* container of the image icon and the buttom of responsive desing
+the estucture of the container is the same of the navbar of bootstrap
+is a ul, that this have 2 li , one for the icon and the other for the anme of the product
+and the ul have a div, and this have a the button responsive.
+*/
+.navegation .container{
+    margin: 0;
+    list-style: none;
+    display: flex;
+    height: 5.6em;
+    justify-content: space-between;
+    align-items: center;
+}
+.navegation .container li .tlt{
+    font-family: var(--font);
+    font-size: 5em;
+    text-decoration: none;
+    transition: all 2s ease;
+}
+.navegation .container li img{
+    width: 70px;
+    height: 70px;
+    border-radius: 15px;
+    margin-right: 1em;
+}
+.navegation .container div #main-show{
+    font-size: 3em;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 1s ease;
+}
+.navegation .container div #main-show:hover{
+    background: #fff;
+}
+
+@media (max-width:768px){
+    .navegation .container li .tlt{
+        font-size: 3.7em;
+    }
+    .navegation .container div #main-show{
+        font-size: 2.5em;
+    }
+}
+@media (max-width:425px){
+    .navegation .container{
+        padding-left: 10px;
+    }
+    .navegation .container li .tlt{
+        font-size: 3.5em;
+    }
+    .navegation .container div #main-show{
+        font-size: 2em;
+    }
+}
+
+@media (max-width:375px){
+    .navegation .container{
+        height: 5em;
+    }
+    .navegation .container li .tlt{
+        font-size: 3em;
+    }
+    .navegation .container div #main-show{
+        font-size: 1.8em;
+    }
+    .navegation .container li img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------------------*/
+/* container called ctn2 of the navegation general*/
+
+/*first fase, this object must to be ocult*/
+.navegation .ctn{
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    margin: 0;
+    padding: 12px;
+    border-radius: 8px;
+    list-style: none;
+    display: block;
+    background: var(--bgnav);
+    animation: show2 0.5s ease;
+    transform: translateX(calc(0% - 20em));
+}
+@keyframes show2{
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(calc(0% - 20em));
+    }
+}
+
+
+
+/*second fase, this part must to be the beautiful face*/
+.navegation .ctn2 {
+    position: fixed;
+    top: 100px;
+    left: 20px;
+    margin: 0;
+    padding: 12px;
+    border-radius: 8px;
+    list-style: none;
+    display: block;
+    background: var(--bgnav);
+    animation: show 0.5s ease-in-out;
+}
+
+@keyframes show{
+    0%{
+        transform: translateX(calc(0% - 20em));
+    }
+    100%{
+        transform: translateX(0%);
+    }
+}
+.navegation .ctn2 li{
+    padding: 0.7em;
+}
+.navegation .ctn2 li .linkAC{
+    color: black;
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: all 1s;
+}
+.navegation .ctn2 li .linkAC:hover{
+    color: black;
+}
+.navegation .ctn2 li .linkAC::after{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background: black;
+    display: block;
+}
+
+.navegation .ctn2 li .link{
+    color: var(--color);
+    text-decoration: none;
+    font-size: 1.3em;
+    transition: all 1s;
+}
+
+.navegation .ctn2 li .link:hover{
+    color: black;
+}
+
+.navegation .ctn2 li .link::after{
+    content: "";
+    width: 0%;
+    height: 3px;
+    background: var(--color);
+    display: block;
+    transition: 0.6s;
+}
+
+.navegation .ctn2 li .link:hover::after{
+    width: 100%;
+}
