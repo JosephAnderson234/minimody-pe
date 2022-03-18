@@ -11,6 +11,7 @@ import Foter from './components/foter';
 //Pages
 import Home from './pages/home';
 import Contacto from './pages/contacto';
+import TermsAndConditions from './pages/terms&conditions';
 
 const url = "http://192.168.254.110:2000/post";
 fetch(url)
@@ -59,6 +60,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contacto" element={<Contacto />} />
+          <Route path="/terms&conditions" element={<TermsAndConditions />} />
         </Routes>
       </div>
       <Foter/>
