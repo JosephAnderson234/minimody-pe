@@ -1,5 +1,13 @@
 {
     "recommendations": [
-        "jonkwheeler.styled-components-snippets"
+        "jonkwheeler.styled-components-snippets",
+        "usernamehw.errorlens",
+        "adpyke.codesnap",
+        "github.copilot",
+        "eamodio.gitlens",
+        "oderwat.indent-rainbow",
+        "ritwickdey.liveserver",
+        "esbenp.prettier-vscode",
+        "2gua.rainbow-brackets"
     ]
 }

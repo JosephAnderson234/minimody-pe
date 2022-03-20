@@ -1,0 +1,265 @@
+@import url('./baseColors.css');
+
+.socialConteiner{
+    width: 100%;
+}
+
+.socialConteiner .navSocial{
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.socialConteiner .navSocial ul{
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+}
+
+.socialConteiner .navSocial ul li{
+    padding: 1em;
+    margin: 0.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+/*when the li is disable*/
+.socialConteiner .navSocial ul .disable{
+    background: var(--bgnav);
+    color: black;
+}
+
+.socialConteiner .navSocial ul .disable:hover{
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+.socialConteiner .navSocial ul .disable:active{
+    background: #000;
+}
+.socialConteiner .navSocial ul .disable:active ion-icon{
+    color: #fff;
+}
+/*when the li is active*/
+.socialConteiner .navSocial ul .active{
+    background: black;
+    color: #fff;
+}
+
+.socialConteiner .navSocial ul .active:hover{
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+.socialConteiner .navSocial ul .active:active{
+    background: #000;
+}
+.socialConteiner .navSocial ul .active:active ion-icon{
+    color: #fff;
+}
+
+/*----------------------------------------------------------*/
+/*efect of the containers with the link's contact*/
+/*----------------------------------------------------------*/
+
+/*when the red social is active*/
+.socialConteiner .containerS{
+    margin-top: 2em;
+    display: block;
+    width: 100%;
+    background: var(--color);
+    padding: 1em;
+    z-index: 1;
+}
+.socialConteiner .containerS .iconG{
+    position: absolute;
+    top: 165px;
+    width: 50px;
+    height: 50px;
+    right: calc(50% - 1.5em);
+    background: var(--bgnav);
+    z-index: 5;
+    border-radius: 15%;
+    padding: 0.5em;
+    transition: all 0.3s;
+}
+
+.socialConteiner .containerS .iconG:hover{
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+}
+
+.socialConteiner .containerS .iconG ion-icon{
+    font-size: 2.1em;
+}
+
+.socialConteiner .containerS .example {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    border-radius: 0.5em;
+    padding: 1em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    transition: all 0.3s;
+    z-index: 2;
+}
+.socialConteiner .containerS .example a{
+    text-decoration: none;
+    font-family: var(--font3);
+    color: black;
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+.socialConteiner .containerS .example a:hover{
+    text-shadow: var(--bgnav) 0 0 10px;
+}
+
+/*----------------------------*/
+
+/*when was disabled*/
+
+.socialConteiner .off{
+    display: none;
+}
+
+/*span the video*/
+.socialConteiner .spanVideo .vdS{
+    width: 100%;
+    height: 100%;
+    background: black;
+    z-index: 3;
+    display: flex;
+    transition: all 0.3s;
+}
+
+.socialConteiner .spanVideo .vdS .video{
+    width:  50%;
+    z-index: 4;
+    transition: all 0.3s;
+}
+
+.socialConteiner .spanVideo .vdS p{
+    font-family: var(--font2);
+    color: var(--background);
+    font-weight: 1000;
+    width: 50%;
+    display: flex;
+    font-size: 5em;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+.socialConteiner .spanVideo .vdS p a{
+    text-decoration: none;
+    color: var(--background);
+    transition: all 0.3s;
+}
+.socialConteiner .spanVideo .vdS p:hover{
+    text-shadow: #fff 0 0 10px;
+}
+
+
+@media (max-width: 990px){
+    .socialConteiner .containerS .example img{
+        width: 80%;
+    }
+}
+
+@media (max-width: 930px){
+    .socialConteiner .spanVideo .vdS{
+        display: block
+    }
+    .socialConteiner .spanVideo .vdS .video{
+        width: 40%;
+        margin: auto;
+    }
+    .socialConteiner .spanVideo .vdS p{
+        margin: auto;
+        padding: 1em;
+        font-size: 3em;
+    }
+    .socialConteiner .spanVideo .vdS p a{
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 720px){
+    .socialConteiner .containerS .example img{
+        width: 70%;
+    }
+    .socialConteiner .containerS .iconG{
+        width: 40px;
+        height: 40px;
+    }
+    .socialConteiner .containerS .iconG ion-icon{
+        font-size: 1.5em;
+    }
+}
+
+@media (max-width: 680px){
+    .socialConteiner .spanVideo .vdS .video{
+        margin: auto;
+        width: 60%;
+    }
+}
+@media (max-width: 650px){
+    .socialConteiner .spanVideo .vdS .video{
+        margin: auto;
+        width: 70%;
+    }
+    .socialConteiner .spanVideo .vdS p{
+        margin: auto;
+        padding: 1em;
+        font-size: 2.5em;
+        width: 80%;
+    }
+}
+
+@media (max-width: 610px){
+    .socialConteiner .navSocial ul li{
+        font-size: 0.8em;
+    }
+}
+
+@media (max-width: 540px){
+    .socialConteiner .containerS .example{
+        display: block;
+    }
+    .socialConteiner .containerS .example img{
+        width: 100%;
+    }
+    .socialConteiner .containerS .example a{
+        display: block;
+        position: relative;
+        width: 140px;
+        font-size: 1.5em;
+        margin: auto;
+    }
+}
+
+@media (max-width: 350px){
+    .socialConteiner .containerS{
+        padding: 0.5em;
+    }
+    .socialConteiner .containerS .example img{
+        margin-top: 1em;
+    }
+}
+
+@media (max-width: 340px){
+    .socialConteiner .spanVideo .vdS .video{
+        margin: auto;
+        width: 80%;
+    }
+    .socialConteiner .spanVideo .vdS p{
+        margin: auto;
+        padding: 1em;
+        font-size: 2em;
+        width: 80%;
+    }
+}

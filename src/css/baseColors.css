@@ -8,9 +8,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
 
+@import url(//db.onlinewebfonts.com/c/f7afe66fe9d022d7dc7fd57e4adc078f?family=GT+Walsheim+Pro+Bold);
+
 @font-face {
     font-family: "LonelyArmadillo";
     src: url('./font/LonelyArmadillo Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: "MetroScript";
+    src: url('./metroscript-regular_gVJBy/MetroScript Regular/MetroScript Regular.otf') format('opentype');
+}
+@font-face {
+    font-family: "GT Walsheim Pro Bold";
+    src: url('./gtwalsheimpro_bold/GT Walsheim Pro-Bold.ttf') format('truetype');
 }
 
 :root{
