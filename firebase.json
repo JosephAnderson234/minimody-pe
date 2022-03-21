@@ -5,7 +5,12 @@
     "rewrites": [ {
       "source": "/contacto",
       "destination": "/index.html"
-    } ],
+    },
+    {
+      "source": "/terms&conditions",
+      "destination": "/index.html"
+    }
+    ],
 
     "ignore": [
       "firebase.json",
